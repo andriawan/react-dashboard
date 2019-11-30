@@ -1,16 +1,12 @@
 import React from 'react';
-import './App.css';
+import './styles.css';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Andriawan React Dashboard
-        </p>
-      </header>
+    <div>
+      <Navbar />
     </div>
   );
 }
-
 export default App;
