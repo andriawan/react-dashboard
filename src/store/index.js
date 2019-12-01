@@ -10,7 +10,7 @@ const initialState = {
     'https://raw.githubusercontent.com/andriawan/my-react-portofolio/master/assets/icon/',
   base_url: 'https://react.andriawan.com/',
   my_setting:
-    'https://raw.githubusercontent.com/andriawan/my-react-portofolio/master/docs/my_setting.json',
+    'https://raw.githubusercontent.com/andriawan/my-react-portofolio/master/my_setting.json',
   url_home_portofolio:
     'https://api.github.com/repos/andriawan/my-react-portofolio/contents/docs',
 };
