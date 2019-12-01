@@ -26,6 +26,10 @@ const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
 const eslint = require('eslint');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin;
+const glob = require('glob-all');
 const meta = require('../src/meta');
 
 const postcssNormalize = require('postcss-normalize');
@@ -594,6 +598,14 @@ module.exports = function(webpackEnv) {
       //   `index.html`
       // - "entrypoints" key: Array of files which are included in `index.html`,
       //   can be used to reconstruct the HTML if necessary
+      isEnvProduction &&
+        new PurgecssPlugin({
+          paths: [
+            paths.appHtml,
+            ...glob.sync(`${paths.appSrc}/**/*`, { nodir: true }),
+          ],
+        }),
+      isEnvProduction && new BundleAnalyzerPlugin(),
       new ManifestPlugin({
         fileName: 'asset-manifest.json',
         publicPath: publicPath,
