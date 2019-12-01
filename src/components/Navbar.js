@@ -1,5 +1,5 @@
 import React from 'react';
-import { AtomSpinner } from 'react-epic-spinners';
+import { AtomSpinner } from 'react-epic-spinners/dist/react-epic-spinners.cjs';
 import { connect } from 'react-redux';
 
 function Navbar({ state }) {
