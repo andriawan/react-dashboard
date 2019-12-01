@@ -15,7 +15,8 @@ module.exports = {
     },
     {
       property: 'og:image',
-      content: '',
+      content:
+        'https://raw.githubusercontent.com/andriawan/my-react-portofolio/master/assets/react.png',
     },
     {
       property: 'og:description',
@@ -36,7 +37,8 @@ module.exports = {
     { name: 'twitter:creator', content: '@irwan2andriawan' },
     {
       name: 'twitter:image:src',
-      content: '',
+      content:
+        'https://raw.githubusercontent.com/andriawan/my-react-portofolio/master/assets/react.png',
     },
     { itemprop: 'name', content: 'Andriawan React Collection' },
     {
@@ -45,7 +47,8 @@ module.exports = {
     },
     {
       itemprop: 'image',
-      content: '',
+      content:
+        'https://raw.githubusercontent.com/andriawan/my-react-portofolio/master/assets/react.png',
     },
   ],
 };
