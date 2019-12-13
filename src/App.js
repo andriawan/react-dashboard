@@ -31,7 +31,7 @@ function App({ state }) {
         <div className="w-full sm:w-1/2 lg:w-1/4 xl:w-1/5 md:w-1/3 px-3 py-3">
           <ProjectList
             name={item.name}
-            link={state.base_url}
+            link={item.name}
             banner={state.react_logo}
           />
         </div>
